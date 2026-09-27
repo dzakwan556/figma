@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riwayat Sewa — Tapak Rimba</title>
+<meta name="description" content="Pantau status penyewaan alat outdoor kamu, dari menunggu pembayaran hingga selesai.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR (Sudah Login) ================= -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="assets/logo.png" alt="Logo Tapak Rimba">
+      <span class="brand-name">TAPAK <span>RIMBA</span></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="katalog.html">Katalog</a>
+      <a href="about.html">Tentang Kami</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="keranjang.html" class="icon-btn" aria-label="Keranjang">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9.5" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/></svg>
+        <span class="cart-count">2</span>
+      </a>
+      <a href="dashboard.html" class="user-chip">
+        <span class="avatar">BS</span>
+        <span>Budi Santoso</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a>
+      <span class="sep">/</span>
+      <a href="dashboard.html">Profil Saya</a>
+      <span class="sep">/</span>
+      <span class="current">Riwayat Sewa</span>
+    </div>
+    <h1>Riwayat Sewa</h1>
+    <p>Pantau status penyewaan alatmu, dari menunggu pembayaran sampai selesai dikembalikan.</p>
+  </div>
+</section>
+
+<!-- ================= RIWAYAT ================= -->
+<section class="section">
+  <div class="container dashboard-layout">
+
+    <!-- ===== SIDEBAR AKUN ===== -->
+    <nav class="dashboard-nav">
+      <a href="dashboard.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        Profil Saya
+      </a>
+      <a href="riwayat.html" class="active">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        Riwayat Sewa
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.4 7-11a7 7 0 0 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Alamat Tersimpan
+      </a>
+      <div class="nav-divider"></div>
+      <a href="login.html" class="logout">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        Keluar
+      </a>
+    </nav>
+
+    <!-- ===== DAFTAR RIWAYAT ===== -->
+    <div>
+
+      <div class="status-tabs">
+        <button type="button" class="status-tab active" data-filter="semua">Semua</button>
+        <button type="button" class="status-tab" data-filter="pending">Menunggu Pembayaran</button>
+        <button type="button" class="status-tab" data-filter="aktif">Sedang Berjalan</button>
+        <button type="button" class="status-tab" data-filter="selesai">Selesai</button>
+        <button type="button" class="status-tab" data-filter="terlambat">Terlambat</button>
+      </div>
+
+      <!-- Menunggu Pembayaran -->
+      <div class="order-card" data-status="pending">
+        <div class="order-card-header">
+          <div>
+            <span class="order-id">#TR-20261025-004</span>
+            <span class="order-date">Dipesan 25 Okt 2026</span>
+          </div>
+          <span class="badge badge-pending">Menunggu Pembayaran</span>
+        </div>
+        <div class="order-card-body">
+          <div class="order-items-preview">
+            <div class="order-item-thumb"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="4"/><path d="M9 21l1.5-8h3L15 21"/></svg></div>
+          </div>
+          <div class="order-items-text">
+            Headlamp Petzl Tikka
+            <span>Sewa 27–29 Okt 2026 · 2 hari</span>
+          </div>
+        </div>
+        <div class="order-card-footer">
+          <span class="order-total">Total <strong>Rp20.000</strong></span>
+          <div class="order-actions">
+            <a href="detail-produk.html" class="btn btn-ghost btn-sm">Lihat Detail</a>
+            <a href="checkout.html" class="btn btn-primary btn-sm">Bayar Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sedang Berjalan -->
+      <div class="order-card" data-status="aktif">
+        <div class="order-card-header">
+          <div>
+            <span class="order-id">#TR-20261012-003</span>
+            <span class="order-date">Dipesan 12 Okt 2026</span>
+          </div>
+          <span class="badge badge-aktif">Sedang Berjalan</span>
+        </div>
+        <div class="order-card-body">
+          <div class="order-items-preview">
+            <div class="order-item-thumb"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 4v16"/></svg></div>
+            <div class="order-item-thumb"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="6"/><path d="M9 4h6M12 4v4"/></svg></div>
+          </div>
+          <div class="order-items-text">
+            Tenda Dome Consina 4 Orang, Kompor Portable
+            <span>Sewa 12–15 Okt 2026 · 3 hari</span>
+          </div>
+        </div>
+        <div class="order-card-footer">
+          <span class="order-total">Total <strong>Rp264.000</strong></span>
+          <div class="order-actions">
+            <a href="contact.html" class="btn btn-ghost btn-sm">Hubungi CS</a>
+            <a href="detail-produk.html" class="btn btn-outline btn-sm">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terlambat -->
+      <div class="order-card" data-status="terlambat">
+        <div class="order-card-header">
+          <div>
+            <span class="order-id">#TR-20260928-002</span>
+            <span class="order-date">Dipesan 28 Sep 2026</span>
+          </div>
+          <span class="badge badge-terlambat">Terlambat</span>
+        </div>
+        <div class="order-card-body">
+          <div class="order-items-preview">
+            <div class="order-item-thumb"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8V6a5 5 0 0 1 10 0v2"/><rect x="5" y="8" width="14" height="13" rx="2"/><path d="M9 12h6"/></svg></div>
+          </div>
+          <div class="order-items-text">
+            Carrier Eiger 60L Explore
+            <span>Seharusnya kembali 26 Sep 2026 · Terlambat 1 hari</span>
+          </div>
+        </div>
+        <div class="order-card-footer">
+          <span class="order-total">Denda Keterlambatan <strong>Rp15.000</strong></span>
+          <div class="order-actions">
+            <a href="checkout.html" class="btn btn-accent btn-sm">Bayar Denda</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selesai -->
+      <div class="order-card" data-status="selesai">
+        <div class="order-card-header">
+          <div>
+            <span class="order-id">#TR-20260901-001</span>
+            <span class="order-date">Dipesan 1 Sep 2026</span>
+          </div>
+          <span class="badge badge-selesai">Selesai</span>
+        </div>
+        <div class="order-card-body">
+          <div class="order-items-preview">
+            <div class="order-item-thumb"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18c0-5 4-9 8-9s8 4 8 9"/><path d="M4 18h16"/></svg></div>
+            <div class="order-item-thumb"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-16h2l-1 6h6l1-6h2l-4 16"/></svg></div>
+          </div>
+          <div class="order-items-text">
+            Sleeping Bag Rei -5°C, Trekking Pole Sepasang
+            <span>Sewa 1–4 Sep 2026 · 3 hari</span>
+          </div>
+        </div>
+        <div class="order-card-footer">
+          <span class="order-total">Total <strong>Rp96.000</strong></span>
+          <div class="order-actions">
+            <a href="katalog.html" class="btn btn-ghost btn-sm">Sewa Lagi</a>
+            <a href="detail-produk.html#ulasan" class="btn btn-outline btn-sm">Beri Ulasan</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img class="brand-mark" src="assets/logo.png" alt="Logo Tapak Rimba">
+          <span class="brand-name">TAPAK RIMBA</span>
+        </a>
+        <p>Layanan sewa alat naik gunung dan camping — bersih, terawat, dan siap dipakai untuk perjalananmu berikutnya.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 20l1.3-4A8 8 0 1 1 9 19l-5 1z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M14 4v10.5a3.5 3.5 0 1 1-3-3.46"/><path d="M14 4c.5 2.5 2 4 5 4.3"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="katalog.html">Katalog</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="contact.html">Hubungi Kami</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Akun</h4>
+        <ul>
+          <li><a href="login.html">Masuk</a></li>
+          <li><a href="register.html">Daftar</a></li>
+          <li><a href="dashboard.html">Profil Saya</a></li>
+          <li><a href="riwayat.html">Riwayat Sewa</a></li>
+          <li><a href="syarat.html">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <ul>
+          <li>Jl. Kaliurang Km. 8, Sleman, Yogyakarta</li>
+          <li>+62 812-3456-7890</li>
+          <li>halo@tapakrimba.id</li>
+          <li>Setiap hari, 07.00–21.00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="current-year">2026</span> Tapak Rimba. Seluruh hak cipta dilindungi.</span>
+      <span>Dibuat untuk para pejalan kaki di jalur setapak.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
